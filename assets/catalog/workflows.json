@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflows": [
+    {
+      "id": "example-project-review",
+      "title": "项目发布前的检查与说明",
+      "description": "可选示例：先检查网页体验，再把已验证的功能与启动方式写入 README。",
+      "best_for": "有网页界面的项目准备分享给新用户时。",
+      "copy_prompt": "先使用 $web-ui-review 检查关键网页与手机布局，再用 $project-readme 整理已验证的功能和使用说明。缺少任何一步的能力或材料时先明确说明。",
+      "steps": [
+        {
+          "skill": "web-ui-review",
+          "label": "检查体验",
+          "role": "记录真实交互问题与复现步骤。"
+        },
+        {
+          "skill": "project-readme",
+          "label": "整理说明",
+          "role": "把已验证的功能、安装和使用步骤写入文档。"
+        }
+      ]
+    }
+  ]
+}

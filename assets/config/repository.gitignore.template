@@ -1,0 +1,22 @@
+# Local Skill Center runtime
+center/
+data/scan-sources.local.json
+data/project-roots.json
+data/personal-catalog.local.json
+data/classification-suggestions.local.json
+data/server-runtime.json
+data/*.sqlite3
+data/*.sqlite3-wal
+data/*.sqlite3-shm
+logs/
+
+# Private usage, feedback, screenshots, and execution evidence
+.execution/
+browser-smoke*/
+approval-manifest.json
+server-*.log
+
+# Local caches
+__pycache__/
+*.pyc
+node_modules/

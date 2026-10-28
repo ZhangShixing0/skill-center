@@ -1,0 +1,8 @@
+{
+  "__meta__": {
+    "schema_version": 1,
+    "locale": "zh-CN",
+    "description": "Optional display metadata; no third-party skill content is bundled."
+  },
+  "skills": {}
+}

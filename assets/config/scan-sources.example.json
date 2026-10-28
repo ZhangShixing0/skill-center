@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "automatic": {
+    "personal": true,
+    "system": true,
+    "plugins": true,
+    "agents_global": true
+  },
+  "project_sources": [],
+  "custom_ignore_parts": [],
+  "ignore_parts": [
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".svn",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    "venv"
+  ]
+}

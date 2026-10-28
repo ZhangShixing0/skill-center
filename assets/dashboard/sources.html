@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>扫描来源 · Codex Skill Center</title>
+  <link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/pine.css"></head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="app">
+    <div id="sidebar"></div>
+    <main class="main source-main" id="main" tabindex="-1">
+      <header class="topbar source-topbar">
+        <div>
+
+          <h1>扫描来源</h1>
+          <p class="subtitle">决定“重新扫描本地 Skills”具体读取哪些目录。自动来源适配 Codex 标准位置；项目来源由每台电脑单独配置，不随 GitHub 源包发布。</p>
+        </div>
+        <div class="actions">
+          <a class="button button-ghost" href="my-skills.html">返回我的 Skills</a>
+          <button class="button" id="download-template" type="button">下载分享模板</button>
+        </div>
+      </header>
+
+      <section class="source-boundary" aria-label="配置边界">
+        <div><span>配置位置</span><strong id="config-state">正在读取…</strong><code id="config-path">—</code></div>
+        <p>预览不会写数据库或修改 Skill 文件。保存并重新扫描失败时，会自动恢复上一次配置。</p>
+      </section>
+
+      <section class="dirty-banner" id="dirty-banner" role="status" hidden>
+        <div><strong>有尚未保存的修改</strong><p>先预览再保存；离开页面前也会提醒你。</p></div>
+        <button class="button button-small button-ghost" id="revert" type="button">撤销本次修改</button>
+      </section>
+
+      <section class="section source-section" aria-labelledby="automatic-title">
+        <div class="section-head">
+          <div>
+
+            <h2 id="automatic-title">自动识别</h2>
+            <p>路径根据当前用户的 Codex 环境计算，不写死用户名或盘符。</p>
+          </div>
+        </div>
+        <div class="source-grid" id="automatic-sources"><div class="skeleton"></div><div class="skeleton"></div></div>
+      </section>
+
+      <section class="section source-section" aria-labelledby="project-title">
+        <div class="section-head source-section-head">
+          <div>
+
+            <h2 id="project-title">项目来源</h2>
+            <p>“Skill 容器”只读一层子文件夹；“单个 Skill”只读当前文件夹。不会递归扫整个项目。</p>
+          </div>
+          <button class="button button-small" id="add-source" type="button">添加项目来源</button>
+        </div>
+        <div class="project-source-list" id="project-sources"></div>
+      </section>
+
+      <details class="section source-section advanced-source-options">
+        <summary>
+          <div>
+
+            <strong>高级扫描设置</strong>
+            <small>查看默认忽略规则，或补充你自己的目录名</small>
+          </div>
+          <span aria-hidden="true">展开</span>
+        </summary>
+        <div class="advanced-source-content">
+          <div class="source-field">
+            <span>系统默认忽略（只读）</span>
+            <div class="default-ignore-list" id="default-ignore-parts"></div>
+            <small>这些安全规则始终生效，不能在这里删除。</small>
+          </div>
+        <label class="source-field">
+          <span>自定义忽略目录</span>
+          <textarea class="field source-textarea" id="ignore-parts" spellcheck="false" aria-describedby="ignore-help"></textarea>
+          <small id="ignore-help">每行一个目录名；不接受完整路径、通配符或 SKILL.md。留空即可只使用默认规则。</small>
+        </label>
+        </div>
+      </details>
+
+      <section class="section preview-section" aria-labelledby="preview-title">
+        <div class="section-head source-section-head">
+          <div>
+
+            <h2 id="preview-title">保存前预览</h2>
+            <p>先验证路径、模式和候选数量，再允许保存。</p>
+          </div>
+          <div class="actions">
+            <button class="button" id="preview" type="button">预览扫描</button>
+            <button class="button button-primary" id="save" type="button" disabled>保存并扫描</button>
+          </div>
+        </div>
+        <div class="preview-result" id="preview-result" aria-live="polite">
+          <div class="empty"><strong>尚未预览</strong><p>任何配置变化都会使上一次预览失效。</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/shared.js"></script>
+  <script src="assets/sources.js"></script>
+</body>
+</html>

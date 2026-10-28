@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>工作流 · Codex Skill Center</title>
+  <link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/pine.css"></head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="app">
+    <div id="sidebar"></div>
+    <main class="main" id="main" tabindex="-1">
+      <header class="topbar">
+        <div>
+
+          <h1>工作流</h1>
+          <p class="subtitle">把多个 Skill 组织成完整交付链路。作者建议组合和实际共同运行严格分开：建议解决“应该怎么搭”，运行记录回答“你真的怎么用”。</p>
+        </div>
+        <div class="actions">
+          <a class="button button-ghost" href="my-skills.html">返回能力库</a>
+          <a class="button button-primary" href="insights.html#co-use">查看共同运行统计</a>
+        </div>
+      </header>
+
+      <section class="evidence-boundary" aria-label="工作流证据边界">
+        <div><strong>不会用时间接近猜测 Skill 组合</strong><p>只有共享同一不透明运行编号的调用，才计入“实际一起使用”。历史记录仍保留在单 Skill 统计中。</p></div>
+        <div class="evidence-metrics">
+          <div><span>建议模板</span><strong id="workflow-total">—</strong></div>
+          <div><span>当前可完整执行</span><strong id="workflow-ready">—</strong></div>
+          <div><span>实际多 Skill 运行</span><strong id="workflow-observed">—</strong></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="workflow-library-title">
+        <div class="section-head workflow-library-head">
+          <div><h2 id="workflow-library-title">建议组合</h2><p>模板是可编辑的起点，不等于你已经使用过。</p></div>
+          <div class="workflow-filter">
+            <label class="sr-only" for="workflow-search">搜索工作流</label>
+            <input class="field" id="workflow-search" type="search" placeholder="搜索目标、交付物或 Skill">
+            <label class="sr-only" for="workflow-status">可用状态</label>
+            <select class="field" id="workflow-status">
+              <option value="">全部状态</option>
+              <option value="ready">当前可完整执行</option>
+              <option value="partial">仍缺少步骤</option>
+            </select>
+          </div>
+        </div>
+        <div class="workflow-grid" id="workflow-list" aria-live="polite"><div class="skeleton"></div><div class="skeleton"></div></div>
+      </section>
+
+      <section class="section" id="observed" aria-labelledby="observed-title">
+        <div class="section-head"><div><h2 id="observed-title">实际共同运行</h2><p>以下关系只来自共享运行编号的数据，不使用模糊时间推断。</p></div></div>
+        <div id="observed-list"><div class="skeleton"></div></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/shared.js"></script>
+  <script src="assets/workflows.js"></script>
+</body>
+</html>

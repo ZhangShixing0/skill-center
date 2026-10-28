@@ -1,0 +1,2 @@
+# Python >= 3.10. Application runtime uses only the Python standard library.
+# No pip packages are required to start Skill Center.

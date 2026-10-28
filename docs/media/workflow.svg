@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-labelledby="title desc">
+<title id="title">从任务到执行的四个阶段</title><desc id="desc">用户描述目标，Skill Center 帮助选择能力与准备说明，最后由用户交给已有 Agent 执行。</desc>
+<rect width="1200" height="230" rx="16" fill="#eef2ed"/>
+<g fill="#fff" stroke="#dce4d8"><rect x="28" y="45" width="250" height="140" rx="12"/><rect x="326" y="45" width="250" height="140" rx="12"/><rect x="624" y="45" width="250" height="140" rx="12"/></g>
+<rect x="922" y="45" width="250" height="140" rx="12" fill="#273c35"/>
+<g stroke="#365c42" stroke-width="2" fill="none"><path d="M289 115h25m-7-7 7 7-7 7"/><path d="M587 115h25m-7-7 7 7-7 7"/><path d="M885 115h25m-7-7 7 7-7 7"/></g>
+<g font-family="Segoe UI, Microsoft YaHei, sans-serif" text-anchor="middle">
+<g fill="#24382f" font-size="25" font-weight="600"><text x="153" y="100">描述任务</text><text x="451" y="100">选择能力</text><text x="749" y="100">准备说明</text></g>
+<g fill="#526654" font-size="18"><text x="153" y="143">目标与想要的结果</text><text x="451" y="143">核对理由与适用范围</text><text x="749" y="143">补材料、检查、复制</text></g>
+<text x="1047" y="100" fill="#f4f8ef" font-size="25" font-weight="600">交给 Agent</text><text x="1047" y="143" fill="#d0ddcf" font-size="18">在原有工具中执行</text>
+</g></svg>

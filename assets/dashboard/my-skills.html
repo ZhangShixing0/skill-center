@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>能力库 · Skill Center</title><link rel="stylesheet" href="assets/shared.css"><link rel="stylesheet" href="assets/pine.css"><link rel="stylesheet" href="assets/library.css"><link rel="stylesheet" href="assets/task-workspace.css"><link rel="stylesheet" href="assets/task-finder.css"></head>
+<body class="library-page">
+<a class="skip-link" href="#main">跳到能力库</a>
+<div class="app"><div id="sidebar"></div><div class="library-workspace">
+<header class="utility"><span>个人工作空间 <span aria-hidden="true">/</span> <span id="workspace-label">能力库</span></span><a href="sources.html" id="scan-status">读取本地索引…</a></header>
+<main class="main library-main" id="main" tabindex="-1">
+<div id="library-view">
+<header class="library-title"><div><h1>能力库</h1><p>找到合适的能力，开始下一件事。</p></div><div class="library-title-actions"><button class="button button-primary" id="open-task-finder" type="button">按任务找能力</button><button class="button" id="scan" type="button">刷新本地索引</button></div></header>
+<div class="task-search"><span id="search-icon" aria-hidden="true"></span><label class="sr-only" for="search">搜索 Skill 或任务</label><input id="search" type="search" autocomplete="off" placeholder="搜索 Skill，或描述你想完成的任务"><kbd>Ctrl K</kbd></div>
+<div class="task-shortcuts"><span>从任务开始</span><button type="button" data-task="项目 README">完善项目说明</button><button type="button" data-task="网页界面检查">检查网页体验</button><button type="button" data-task="研究调研">调研一个新方向</button></div>
+<div id="overview" class="inventory-summary" aria-live="polite"></div>
+<div id="load-notice" role="status" hidden></div>
+<div id="workflow-matches" class="workflow-matches" hidden></div>
+<div class="library-layout">
+<section class="inventory-pane" aria-label="能力列表">
+<div class="library-tabs" role="group" aria-label="能力范围">
+<button data-scope="all" aria-pressed="true">全部能力</button><button data-scope="owned" aria-pressed="false">已确认</button><button data-scope="inbox" aria-pressed="false">待认领</button><button data-scope="public" aria-pressed="false">公开与系统</button><button data-scope="favorites" aria-pressed="false">收藏</button>
+</div>
+<div class="library-filters"><label><span class="sr-only">领域</span><select id="category"><option value="">所有领域</option></select></label><label><span class="sr-only">来源</span><select id="source"><option value="">所有来源</option><option value="personal">个人全局</option><option value="project">项目级</option><option value="system">系统内置</option><option value="plugin">插件</option></select></label><label class="sort-control"><span class="sr-only">排序</span><select id="sort"><option value="relevance">推荐顺序</option><option value="name">名称</option><option value="recent">最近记录调用</option><option value="usage">已记录调用次数</option></select></label></div>
+<div class="inventory-columns" aria-hidden="true"><span>能力 / 用途</span><span>领域</span><span>归属状态</span><span>收藏</span></div>
+<div id="skills-list" class="capability-list" aria-busy="true"><p class="list-message">正在读取能力库…</p></div>
+<footer class="inventory-footer"><span id="result-count" role="status">读取中</span><button id="reset" type="button">清除筛选</button></footer>
+</section>
+<aside id="capability-detail" class="capability-detail" aria-label="选中能力的详情" tabindex="-1"><div class="detail-placeholder">选中一项能力，在这里查看用途与调用方式。</div></aside>
+</div>
+<footer class="library-footnote"><span>本地关键词与用途匹配</span><a href="insights.html">使用记录为部分覆盖，查看洞察</a></footer>
+</div><section id="task-finder" aria-label="按任务找能力" hidden></section><section id="task-workspace" aria-label="准备任务" hidden></section>
+</main></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/shared.js"></script><script src="assets/capability-search.js"></script><script src="assets/task-brief.js"></script><script src="assets/task-workspace.js"></script><script src="assets/task-match.js"></script><script src="assets/task-finder.js"></script><script src="assets/library.js"></script>
+</body></html>

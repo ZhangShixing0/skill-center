@@ -1,0 +1,7 @@
+interface:
+  display_name: "Skill 管理中心"
+  short_description: "一键启动、诊断、重新扫描并安全改进 Codex Skills"
+  default_prompt: "使用 $skill-manager 检查并启动本地管理中心，预览我的扫描来源，重新扫描全局与项目 Skills，并显示新增、更新和移除差异。"
+
+policy:
+  allow_implicit_invocation: true

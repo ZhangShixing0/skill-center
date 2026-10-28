@@ -1,0 +1,14 @@
+{
+  "__verified_urls__": {
+    "https://github.com/obra/superpowers": {
+      "verified": true,
+      "checked_at": "2026-07-22",
+      "evidence": "Public upstream repository and Codex installation documentation"
+    },
+    "https://github.com/openai/plugins": {
+      "verified": true,
+      "checked_at": "2026-07-22",
+      "evidence": "Public repository under the official OpenAI GitHub organization"
+    }
+  }
+}

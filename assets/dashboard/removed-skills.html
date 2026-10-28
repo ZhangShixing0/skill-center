@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>已移除 Skills · Codex Skill Center</title>
+  <link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/pine.css"></head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="app">
+    <div id="sidebar"></div>
+    <main class="main" id="main" tabindex="-1">
+      <header class="topbar">
+        <div>
+
+          <h1>已移除 Skills</h1>
+          <p class="subtitle">这里不是现有能力库。只有扫描确认文件已经消失的历史记录，保留首次发现、最后确认存在、移除时间、版本和已记录调用，方便追溯而不假装仍可使用。</p>
+        </div>
+        <div class="actions"><a class="button button-ghost" href="my-skills.html">返回现有 Skills</a></div>
+      </header>
+
+      <section class="removed-boundary" aria-label="已移除记录边界">
+        <div><h2>卸载不等于抹掉历史</h2></div>
+        <p>这些记录不会进入“我的 Skills”、待认领、调用选择或现有数量。打开详情只能查看历史，不能执行、改进或同步不存在的文件。</p>
+      </section>
+
+      <section class="stats" aria-label="已移除 Skill 概况">
+        <article class="stat accent"><span>已移除记录</span><strong id="removed-total">—</strong><small>当前文件已不存在</small></article>
+        <article class="stat"><span>曾有调用日志</span><strong id="removed-used">—</strong><small>只统计已记录调用</small></article>
+        <article class="stat"><span>涉及项目</span><strong id="removed-projects">—</strong><small>仅保存本地项目别名</small></article>
+        <article class="stat"><span>最近一次移除</span><strong class="stat-date" id="removed-latest">—</strong><small>扫描首次确认文件消失</small></article>
+      </section>
+
+      <section class="section" aria-labelledby="removed-title">
+        <div class="section-head"><div><h2 id="removed-title">卸载历史</h2><p id="removed-copy">按移除时间排序</p></div></div>
+        <div class="toolbar removed-toolbar">
+          <label class="sr-only" for="removed-search">搜索已移除 Skill</label>
+          <input class="field search" id="removed-search" type="search" placeholder="搜索名称、用途或曾经的来源">
+          <label class="sr-only" for="removed-source">来源范围</label>
+          <select class="field" id="removed-source"><option value="">所有来源</option><option value="personal">全局安装</option><option value="project">项目级</option><option value="plugin">插件</option><option value="system">系统</option></select>
+        </div>
+        <div class="removed-list" id="removed-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/shared.js"></script>
+  <script src="assets/removed-skills.js"></script>
+</body>
+</html>

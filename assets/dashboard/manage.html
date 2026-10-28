@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>归属与维护 · Skill Center</title>
+  <link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/pine.css"></head>
+<body class="management-page">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="app">
+    <div id="sidebar"></div>
+    <main class="main" id="main" tabindex="-1">
+      <header class="topbar">
+        <div>
+
+          <h1>归属与维护</h1>
+          <p class="subtitle">确认作者归属，查看项目副本，维护你的能力资产。</p>
+        </div>
+        <div class="actions update-action">
+          <div class="actions">
+            <a class="button button-ghost" href="removed-skills.html">已移除历史</a>
+            <a class="button button-ghost" href="sources.html">扫描来源</a>
+            <button class="button button-primary" id="scan" type="button">重新扫描本地 Skills</button>
+          </div>
+          <small>重新读取本地清单，不下载、不升级、不修改 Skill 文件</small>
+        </div>
+      </header>
+
+      <section class="action-hub" aria-labelledby="action-title">
+        <div class="goal-finder">
+
+          <h2 id="action-title">先说目标，不必先记住 Skill 名字</h2>
+          <label for="goal-search">你想解决什么问题？</label>
+          <div class="goal-search-row">
+            <input class="field" id="goal-search" type="search" placeholder="例如：整理并安全发布 GitHub 项目">
+            <button class="button button-primary" id="goal-find" type="button">查找合适能力</button>
+          </div>
+          <div class="goal-results" id="goal-results" aria-live="polite"></div>
+        </div>
+        <div class="action-side">
+          <article class="resume-card" id="resume-card">
+
+            <div class="skeleton" aria-hidden="true"></div>
+          </article>
+          <article class="workflow-shortcuts">
+            <div class="action-card-head">
+              <div><h2>用整条流水线完成</h2></div>
+              <a href="workflows.html">查看全部</a>
+            </div>
+            <div id="workflow-shortcuts"><div class="skeleton" aria-hidden="true"></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="update-panel" id="update-panel" aria-live="polite" hidden>
+        <div class="update-panel-head">
+          <div>
+
+            <h2 id="update-title">最近一次更新</h2>
+            <p id="update-time">—</p>
+          </div>
+          <span class="badge ready" id="update-state">索引已同步</span>
+        </div>
+        <div class="update-metrics" aria-label="更新差异">
+          <div><span>新增</span><strong id="update-added">0</strong></div>
+          <div><span>内容更新</span><strong id="update-changed">0</strong></div>
+          <div><span>已移除位置</span><strong id="update-removed">0</strong></div>
+          <div><span>当前位置</span><strong id="update-total">0</strong></div>
+        </div>
+        <div class="update-details" id="update-details"></div>
+        <p class="update-boundary">这里的“重新扫描”只读取全局与已配置项目目录。若要升级或改进 Skill 内容，仍需走单独的来源检查、diff 和明确批准流程。</p>
+      </section>
+
+      <div class="stats-heading">
+        <div><h2>使用与库存摘要</h2><p>数字只代表本地已经记录的范围，未记录不等于没有使用。</p></div>
+        <a class="button button-ghost" href="insights.html">查看完整统计洞察 →</a>
+      </div>
+      <section class="stats" aria-label="个人 Skill 概况">
+        <article class="stat"><span>现有已确认</span><strong id="stat-total">—</strong><small id="proposal-copy">原创、改造与项目孵化</small></article>
+        <article class="stat accent"><span>待认领</span><strong id="stat-inbox">—</strong><small>安装位置不代表由你制作</small></article>
+        <a class="stat stat-link" href="removed-skills.html"><span>已移除历史</span><strong id="stat-removed">—</strong><small>不进入现有列表，历史仍可追溯</small></a>
+        <article class="stat"><span>近 30 天已记录调用</span><strong id="stat-uses">—</strong><small id="usage-coverage">部分覆盖，不代表全部使用</small></article>
+      </section>
+
+      <section class="source-review-panel" id="source-review" aria-labelledby="source-review-title" hidden>
+        <div class="source-review-head">
+          <div>
+
+            <h2 id="source-review-title">待认领 Skills</h2>
+            <p>这些 Skill 当前存在，但只知道安装在全局目录，不能证明由你制作。建议不是结论；只有你明确勾选、预览并提交后才会改变归类。</p>
+          </div>
+          <button class="button button-primary" id="review-toggle" type="button" aria-expanded="false" aria-controls="review-workspace">开始整理</button>
+        </div>
+        <div class="source-review-metrics" aria-label="来源建议概况">
+          <div><span>来源待核对</span><strong id="review-total">0</strong></div>
+          <div><span>高置信度</span><strong id="review-high">0</strong></div>
+          <div><span>需要复核</span><strong id="review-needs">0</strong></div>
+          <div><span>当前已选择</span><strong id="review-selected">0</strong></div>
+        </div>
+        <div class="review-workspace" id="review-workspace" hidden>
+          <div class="review-toolbar">
+            <div class="actions">
+              <button class="button button-small" id="review-select-high" type="button">选择全部高置信度</button>
+              <button class="button button-small button-ghost" id="review-clear" type="button">清空选择</button>
+            </div>
+            <p id="review-selection-copy" aria-live="polite">尚未选择</p>
+          </div>
+          <div id="review-candidates"></div>
+          <div class="review-preview-actions">
+            <p>提交前会再显示一次变更摘要；修改选择后必须重新预览。</p>
+            <button class="button button-primary" id="review-preview" type="button" disabled>预览所选归类</button>
+          </div>
+          <section class="review-confirmation" id="review-confirmation" aria-labelledby="review-confirmation-title" tabindex="-1" hidden></section>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="featured-title">
+        <div class="section-head"><div><h2 id="featured-title">四种网页叙事，不再混成一种风格</h2><p>点击进入统一详情页，查看真实交互演示、提示词与完整工作流。</p></div></div>
+        <div class="featured-grid" id="featured"><div class="skeleton"></div><div class="skeleton"></div></div>
+      </section>
+
+      <section class="section" id="project-section" hidden>
+        <div class="callout"><span class="callout-icon">→</span><div><strong><span id="project-count">0</span> 个项目级 Skill 等待决定</strong><p>它们仍以项目目录为事实来源。可先看推广清单与同名冲突，再决定是否复制为全局快照。</p></div><button class="button button-small" id="project-filter" type="button">只看项目候选</button></div>
+      </section>
+
+      <section class="section" aria-labelledby="all-title">
+        <div class="section-head"><div><h2 id="all-title">现有已确认能力</h2><p id="result-copy">按已记录调用排序</p></div></div>
+        <div class="toolbar">
+          <label class="sr-only" for="search">搜索 Skill</label>
+          <input class="field search" id="search" type="search" placeholder="搜索中文名、技术名或用途">
+          <label class="sr-only" for="source-filter">来源</label>
+          <select class="field" id="source-filter"><option value="">所有来源</option><option value="personal">全局个人</option><option value="project">项目级</option></select>
+          <label class="sr-only" for="sort">排序</label>
+          <select class="field" id="sort"><option value="usage30">已记录调用</option><option value="priority">改进优先级</option><option value="recent">最近记录</option><option value="name">名称</option></select>
+        </div>
+        <div class="filter-block">
+          <span class="filter-label">身份</span>
+          <div class="category-row" id="ownership" aria-label="按身份筛选"></div>
+        </div>
+        <div class="filter-block">
+          <span class="filter-label">分类</span>
+          <div class="category-row" id="categories" aria-label="按分类筛选"></div>
+        </div>
+        <div class="skill-list" id="skills" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/shared.js"></script>
+  <script src="assets/manage.js"></script>
+</body>
+</html>

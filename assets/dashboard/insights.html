@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>统计洞察 · Codex Skill Center</title>
+  <link rel="stylesheet" href="assets/shared.css">
+<link rel="stylesheet" href="assets/pine.css"></head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="app">
+    <div id="sidebar"></div>
+    <main class="main insights-main" id="main" tabindex="-1">
+      <header class="topbar">
+        <div>
+
+          <h1>统计洞察</h1>
+          <p class="subtitle">原有统计没有删除，而是集中到这里回答四个问题：拥有什么、真正用了什么、效果怎样、下一步该改进什么。</p>
+        </div>
+        <div class="actions">
+          <a class="button button-ghost" href="my-skills.html">返回能力库</a>
+          <a class="button button-primary" href="workflows.html">查看工作流</a>
+        </div>
+      </header>
+
+      <section class="coverage-banner" id="coverage-banner" aria-live="polite">
+        <div><h2>正在读取本地记录范围</h2></div>
+      </section>
+
+      <section class="insight-kpis" aria-label="近 30 天统计">
+        <article><span>已记录调用</span><strong id="kpi-events">—</strong><small>近 30 天</small></article>
+        <article><span>活跃天数</span><strong id="kpi-days">—</strong><small>有调用记录的日期</small></article>
+        <article><span>有记录 Skill</span><strong id="kpi-skills">—</strong><small id="kpi-skill-copy">—</small></article>
+        <article><span>多 Skill 共同运行</span><strong id="kpi-runs">—</strong><small>仅共享运行编号</small></article>
+        <article><span>结果反馈样本</span><strong id="kpi-feedback">—</strong><small>成功、部分、失败合计</small></article>
+      </section>
+
+      <section class="insight-grid insight-grid-main">
+        <article class="panel trend-panel">
+          <div class="section-head compact"><div><h2>已记录调用趋势</h2><p>零值表示没有日志，不证明没有实际使用。</p></div></div>
+          <div class="trend-chart" id="trend-chart" role="img" aria-label="近 30 天已记录调用柱状图"></div>
+          <details class="chart-table">
+            <summary>查看每日数字表</summary>
+            <div id="trend-table"></div>
+          </details>
+        </article>
+        <article class="panel outcome-panel">
+          <div class="section-head compact"><div><h2>结果反馈</h2><p id="outcome-copy">读取中</p></div></div>
+          <div id="outcome-breakdown"></div>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="attention-title">
+        <div class="section-head"><div><h2 id="attention-title">值得处理的下一步</h2><p>统计必须导向决定，而不是只展示数字。</p></div></div>
+        <div class="attention-grid">
+          <article class="panel attention-panel"><h3>高使用但体验有问题</h3><p>优先检查失败、部分解决或低评分记录。</p><div id="attention-friction"></div></article>
+          <article class="panel attention-panel"><h3>已经验证稳定</h3><p>至少有两条反馈、评分不低于 4 且没有失败。</p><div id="attention-reliable"></div></article>
+          <article class="panel attention-panel"><h3>尚无调用记录</h3><p>可能没用过，也可能只是日志未覆盖；不要直接判定为闲置。</p><div id="attention-untried"></div></article>
+        </div>
+      </section>
+
+      <section class="insight-grid" aria-label="项目与分类分布">
+        <article class="panel"><div class="section-head compact"><div><h2>调用项目分布</h2></div></div><div id="project-breakdown"></div></article>
+        <article class="panel"><div class="section-head compact"><div><h2>任务分类</h2></div></div><div id="category-breakdown"></div></article>
+      </section>
+
+      <section class="section" id="co-use" aria-labelledby="co-use-title">
+        <div class="section-head"><div><h2 id="co-use-title">实际一起使用</h2><p>这里只显示共享任务运行编号的组合。</p></div><a class="button button-ghost" href="workflows.html">查看建议工作流</a></div>
+        <div id="co-use-insights"></div>
+      </section>
+
+      <section class="section" aria-labelledby="inventory-title">
+        <div class="section-head"><div><h2 id="inventory-title">库存与生命周期仍然保留</h2><p>当前、待认领、公开、移除、重复位置和更新状态都继续统计。</p></div></div>
+        <div class="inventory-grid" id="inventory-grid"></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/shared.js"></script>
+  <script src="assets/insights.js"></script>
+</body>
+</html>

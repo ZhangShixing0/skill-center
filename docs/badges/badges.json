@@ -1,0 +1,8 @@
+{
+  "style": "flat-square-v1",
+  "badges": [
+    {"file":"stage.svg","label":"Stage","value":"Alpha","category":"version","evidence":"../../VERSION"},
+    {"file":"python.svg","label":"Python","value":"3.10+","category":"runtime","evidence":"../../requirements.txt"},
+    {"file":"license.svg","label":"License","value":"MIT","category":"license","evidence":"../../LICENSE"}
+  ]
+}

@@ -1,0 +1,42 @@
+.library-title .library-title-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+#task-finder[hidden]{display:none}
+.finder-heading{margin:22px 0 24px}
+.finder-heading h1{font-size:29px;line-height:1.25;letter-spacing:-.03em;font-weight:650;margin:0 0 10px}
+.finder-heading p{margin:0;color:var(--muted);font-size:14px}
+.finder-form{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 24px}
+.finder-form label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+.finder-form textarea{display:block;box-sizing:border-box;width:100%;min-height:88px;resize:vertical;border:1px solid var(--line);border-radius:7px;padding:12px 14px;font:inherit;line-height:1.65;background:var(--surface);color:var(--text)}
+.finder-form textarea::placeholder{color:var(--muted)}
+.finder-form textarea[aria-invalid=true]{border-color:var(--danger)}
+.finder-form-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px}
+.finder-form-footer p{font-size:12px;color:var(--muted);margin:0}
+.finder-examples{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;margin:12px 0 24px;font-size:12px;color:var(--muted)}
+.finder-examples button{background:none;border:0;border-bottom:1px solid var(--line);color:var(--accent);font:inherit;cursor:pointer;min-height:36px;padding:4px 0}
+.finder-examples button:hover{border-color:var(--accent);color:var(--text)}
+.finder-result-status{font-size:16px;font-weight:600;margin:24px 0 8px}
+.finder-result-status:empty{display:none}
+.finder-result-note{font-size:12px;color:var(--muted);margin:0 0 14px}
+.finder-candidates{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.finder-candidate{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;padding:24px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.finder-candidate:last-child{border-bottom:0}
+.finder-candidate h2{font-size:20px;line-height:1.4;font-weight:600;letter-spacing:-.02em;margin:0 0 4px}
+.finder-skill-name{font-size:12px;color:var(--muted);margin:0 0 14px}
+.finder-reason{font-size:14px;line-height:1.75;margin:0 0 10px;max-width:70ch}
+.finder-basis,.finder-guide-note{font-size:12px;color:var(--muted);margin:0 0 12px}
+.finder-candidate details{font-size:13px;margin-top:12px}
+.finder-candidate summary{cursor:pointer;color:var(--accent);min-height:36px;display:list-item;list-style-position:inside;padding:6px 0}
+.finder-candidate details p{margin:10px 0 8px}
+.finder-candidate ul{padding-left:20px;margin:0 0 12px;font-size:14px;line-height:1.75}
+.finder-preparation h3{font-size:14px;font-weight:600;margin:0 0 8px}
+.finder-preparation .button{min-height:44px}
+.finder-empty{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.finder-empty h2{font-size:20px;margin:0 0 10px;font-weight:600}
+.finder-empty p{max-width:70ch;color:var(--muted);margin:0 0 20px}
+.finder-empty .button{margin:0 10px 8px 0}
+.task-incoming{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.task-incoming[hidden]{display:none}
+.task-incoming h2{font-size:16px;font-weight:600;margin:0 0 8px}
+.task-incoming p{font-size:14px;margin:0 0 12px;white-space:pre-wrap;overflow-wrap:anywhere;max-width:75ch}
+.task-incoming small{display:block;color:var(--muted);font-size:12px;margin:10px 0 0}
+@media(max-width:1190px){.library-title{align-items:flex-start}.library-title>div:first-child{display:block}.library-title p{margin-top:8px}.finder-candidate{gap:24px}}
+@media(max-width:820px){.library-title{flex-direction:column;align-items:stretch;gap:14px}.library-title .library-title-actions{justify-content:flex-start}.finder-heading h1{font-size:27px}.finder-form{padding:18px}.finder-form-footer{align-items:flex-start;flex-direction:column;gap:12px}.finder-form-footer .button{width:100%;min-height:44px}.finder-candidate{grid-template-columns:minmax(0,1fr);gap:20px;padding:20px 18px}.finder-preparation .button{width:100%}.finder-empty{padding:20px 18px}.finder-examples{gap:6px 16px}}
