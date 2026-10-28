@@ -2,6 +2,8 @@
 
 <h1>Skill Center</h1>
 
+**[简体中文](README.md)** · [English](README.en.md)
+
 <img src="docs/media/workbench.png" alt="Skill Center 松绿工作台，展示三个随项目提供的合成示例能力" width="1200">
 
 <p><strong>把已安装的 Skills 整理成可查找、可理解、可开始使用的本地能力工作台。</strong></p>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-labelledby="title desc">
+<title id="title">Four stages from task to execution</title><desc id="desc">The user describes a goal, Skill Center helps choose a capability and prepare a brief, and the user hands it to an existing Agent for execution.</desc>
+<rect width="1200" height="230" rx="16" fill="#eef2ed"/>
+<g fill="#fff" stroke="#dce4d8"><rect x="28" y="45" width="250" height="140" rx="12"/><rect x="326" y="45" width="250" height="140" rx="12"/><rect x="624" y="45" width="250" height="140" rx="12"/></g>
+<rect x="922" y="45" width="250" height="140" rx="12" fill="#273c35"/>
+<g stroke="#365c42" stroke-width="2" fill="none"><path d="M289 115h25m-7-7 7 7-7 7"/><path d="M587 115h25m-7-7 7 7-7 7"/><path d="M885 115h25m-7-7 7 7-7 7"/></g>
+<g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+<g fill="#24382f" font-size="25" font-weight="600"><text x="153" y="100">Describe task</text><text x="451" y="100">Choose skill</text><text x="749" y="100">Prepare brief</text></g>
+<g fill="#526654" font-size="18"><text x="153" y="143">Goal and desired result</text><text x="451" y="143">Reasons and scope</text><text x="749" y="143">Materials, checks, copy</text></g>
+<text x="1047" y="100" fill="#f4f8ef" font-size="25" font-weight="600">Hand to Agent</text><text x="1047" y="143" fill="#d0ddcf" font-size="18">Execute in existing tools</text>
+</g></svg>
