@@ -4,7 +4,7 @@
 
 **[简体中文](README.md)** · [English](README.en.md)
 
-<img src="docs/media/workbench.png" alt="Skill Center 松绿工作台，展示三个随项目提供的合成示例能力" width="1200">
+<img src="docs/media/cover.png" alt="Skill Center 柔和水彩封面：从卡片资料盒中挑选代表写作、开发与调研的技能卡片。让你的 Skills，更好找、更好用。" width="1200">
 
 <p><strong>把已安装的 Skills 整理成可查找、可理解、可开始使用的本地能力工作台。</strong></p>
 
@@ -33,9 +33,11 @@ python scripts/demo.py --open
 
 演示在独立临时目录运行，只加载这三个示例，不扫描你的个人目录。默认地址是 `http://127.0.0.1:8767/my-skills.html`。终端保持打开，按 Ctrl+C 结束；演示服务和临时数据库随后清理。浏览器中的显式草稿仍由该浏览器保存，需在界面中清空。
 
+![Skill Center 松绿工作台，展示三个随项目提供的合成示例能力](docs/media/workbench.png)
+
 ![按任务选择能力：输入项目管理工具调研目标，查看匹配依据和材料建议](docs/media/task-finder.png)
 
-上面及页首截图来自实际运行的隔离演示，全部条目为随仓库提供的示例。
+以上两张截图来自实际运行的隔离演示，全部条目为随仓库提供的示例。
 
 ## 从目标到开始使用
 

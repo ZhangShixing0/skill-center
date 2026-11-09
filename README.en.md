@@ -4,7 +4,7 @@
 
 [简体中文](README.md) · **[English](README.en.md)**
 
-<img src="docs/media/workbench.png" alt="Skill Center pine-green workbench showing the three synthetic example Skills included with the project" width="1200">
+<img src="docs/media/cover.png" alt="Skill Center watercolor cover: choosing a capability from a card library for writing, development and research. Make your Skills easier to find and use." width="1200">
 
 <p><strong>A local workbench for finding, understanding, and preparing the Skills you already have installed.</strong></p>
 
@@ -33,9 +33,11 @@ python scripts/demo.py --open
 
 The demo runs in a temporary isolated directory and loads only these three examples. It does not scan your personal directories. The default address is `http://127.0.0.1:8767/my-skills.html`. Keep the terminal open and press Ctrl+C to stop; the demo service and temporary database are then cleaned up. Explicit browser drafts remain in that browser and should be cleared in the interface when needed.
 
+![Skill Center pine-green workbench showing the three synthetic example Skills included with the project](docs/media/workbench.png)
+
 ![Task-based Skill selection: enter a project-management research goal and review match reasons and material suggestions](docs/media/task-finder.png)
 
-The screenshots above and at the top come from a real isolated demo run. Every displayed entry is an example shipped with this repository.
+The two screenshots above come from a real isolated demo run. Every displayed entry is an example shipped with this repository.
 
 ## From goal to start
 
